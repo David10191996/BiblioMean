@@ -13,5 +13,4 @@ app.listen(process.env.PORT, () =>
   console.log("Backend server running on port: ", process.env.PORT)
 );
 
-
 db.dbConnection();
