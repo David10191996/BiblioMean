@@ -4,6 +4,7 @@ import db from "./db/db.js";
 import dotenv from "dotenv";
 import roleRoutes from "./routes/roleRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import bookRoutes from "./routes/bookRoutes.js";
 
 dotenv.config();
 
@@ -16,13 +17,12 @@ app.use("/api/user", userRoutes);
 
 app.use("/api/role", roleRoutes);
 
+app.use("/api/book", bookRoutes);
+
 app.listen(process.env.PORT, () =>
   console.log("Backend server running on port: ", process.env.PORT)
 );
 
 db.dbConnection();
 
-/*
-lo ultimo que hice fue terminar el registro y validar de ROl, falta verificar que el rol que se cree no este ya registrado
 
-*/

@@ -1,15 +1,14 @@
 import mongoose from "mongoose";
 
 const bookSchema = new mongoose.Schema({
-  nameBook: String,
-  price: Number,
+  name: String,
   author: String,
   category: String,
   publishingHouse: String,
-  user: { type: mongoose.Schema.ObjectId, ref: "users" },
+  //user: { type: mongoose.Schema.ObjectId, ref: "users" },
   registerDate: { type: Date, default: Date.now },
   bookStatus: Boolean,
-  dbStatus: true,
+  dbStatus: Boolean,
 });
 
 const book = mongoose.model("books", bookSchema);
