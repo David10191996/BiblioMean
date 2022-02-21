@@ -2,10 +2,10 @@ import mongoose from "mongoose";
 
 const roleSchema = new mongoose.Schema({
   name: String,
-  decription: String,
+  description: String,
   registerDate: { type: Date, default: Date.now }, 
-  dbStatus: true,
+  dbStatus: Boolean,
 });
 
 const role = mongoose.model("roles", roleSchema); 
-export default {role};
+export default role;
